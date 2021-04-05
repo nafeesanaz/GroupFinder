@@ -1,13 +1,13 @@
-package square.ball.group_finder.ui.dashboard
+package square.ball.group_finder.ui.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
-
+class SearchViewModel : ViewModel() {
+    // TODO: Implement the ViewModel
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is search Fragment"
     }
     val text: LiveData<String> = _text
 }
