@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "764619100192",
-    "project_id": "groupfinder-8ff7b",
-    "storage_bucket": "groupfinder-8ff7b.appspot.com"
+    "project_number": "224063412",
+    "project_id": "groupfinder-1e1ce",
+    "storage_bucket": "groupfinder-1e1ce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:764619100192:android:e4805970afec60c39a6c45",
+        "mobilesdk_app_id": "1:224063412:android:9698b929baca8593490ce1",
         "android_client_info": {
           "package_name": "square.ball.group_finder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "764619100192-rq39vc1sehhbmjb4js9811t6j090ck46.apps.googleusercontent.com",
+          "client_id": "224063412-uhfnlj4crmihnnv5na6vepamo1qk5l6r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "square.ball.group_finder",
+            "certificate_hash": "275662c08dae3e4104ae47470297c2791d87788d"
+          }
+        },
+        {
+          "client_id": "224063412-uct4nbgera3thdqs7qqcuaarmnp58mkl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAN3r-bipJtB6Nl56gApTSyE0Lu-BtJSxI"
+          "current_key": "AIzaSyBb_R1YeATQltOv31QCXfHYCRht3H4iKG0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "764619100192-rq39vc1sehhbmjb4js9811t6j090ck46.apps.googleusercontent.com",
+              "client_id": "224063412-uct4nbgera3thdqs7qqcuaarmnp58mkl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
