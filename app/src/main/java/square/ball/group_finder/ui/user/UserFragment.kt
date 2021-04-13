@@ -13,8 +13,6 @@ import square.ball.group_finder.ui.home.HomeViewModel
 
 class UserFragment : Fragment() {
 
-
-
     private lateinit var userViewModel: UserViewModel
 
     override fun onCreateView(
