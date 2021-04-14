@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "663355246860",
+    "firebase_url": "https://dummydatabase-a80e5-default-rtdb.firebaseio.com",
+    "project_id": "dummydatabase-a80e5",
+    "storage_bucket": "dummydatabase-a80e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663355246860:android:ac6da78ae63be4c38e6129",
+        "android_client_info": {
+          "package_name": "square.ball.group_finder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663355246860-gbmtmdg8phs3lppjnhjeled87mlgf9dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdBDCD-bsGaXxYGwKzsbUdfjAwIOC0NEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663355246860-gbmtmdg8phs3lppjnhjeled87mlgf9dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
