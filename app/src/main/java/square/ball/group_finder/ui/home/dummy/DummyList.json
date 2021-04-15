@@ -1,0 +1,31 @@
+{
+    "groups" : {
+        "id1": {
+            "groupname": "test1",
+            "location" : "Helsinki",
+            "image" : "https://firebasestorage.googleapis.com/v0/b/dummydatabase-a80e5.appspot.com/o/placeholderseal.jpg?alt=media&token=ed23f0c4-0d22-4f4c-ad8a-e3c1189f90b2",
+            "fauvorite" : "true",
+            "tags" : "badminton, hobbyists",
+            "rating" : "4",
+            "membercount" : "15"
+        },
+        "id2": {
+            "groupname": "test2",
+            "location" : "Oulu",
+            "image" : "https://firebasestorage.googleapis.com/v0/b/dummydatabase-a80e5.appspot.com/o/placeholderseal.jpg?alt=media&token=ed23f0c4-0d22-4f4c-ad8a-e3c1189f90b2",
+            "fauvorite" : "true",
+            "tags" : "badminton, hobbyists",
+            "rating" : "4",
+            "membercount" : "7"
+        },
+        "id3": {
+            "groupname": "test3",
+            "location" : "Kemi",
+            "image" : "https://firebasestorage.googleapis.com/v0/b/dummydatabase-a80e5.appspot.com/o/placeholderseal.jpg?alt=media&token=ed23f0c4-0d22-4f4c-ad8a-e3c1189f90b2",
+            "fauvorite" : "false",
+            "tags" : "badminton, hobbyists",
+            "rating" : "4",
+            "membercount" : "5"
+        }
+    }
+}
