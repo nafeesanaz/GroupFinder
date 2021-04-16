@@ -30,5 +30,10 @@ class UserFragment : Fragment() {
     }
 
 
+<<<<<<< Updated upstream
+=======
+        currentUser?.let {  }
+    }
+>>>>>>> Stashed changes
 
 }
