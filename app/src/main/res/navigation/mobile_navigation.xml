@@ -7,9 +7,12 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="square.ball.group_finder.ui.home.HomeFragment"
+        android:name="square.ball.group_finder.ui.home.HomeGroupFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+
+        tools:layout="@layout/fragment_group_list" />
+        />
+
     <fragment
         android:id="@+id/navigation_search"
         android:name="square.ball.group_finder.ui.search.SearchFragment"
