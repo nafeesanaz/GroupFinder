@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import square.ball.group_finder.R
-import square.ball.group_finder.ui.home.HomeViewModel
+
 
 class UserFragment : Fragment() {
 
