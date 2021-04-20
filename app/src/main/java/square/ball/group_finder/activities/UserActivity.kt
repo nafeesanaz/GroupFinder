@@ -1,8 +1,11 @@
 package square.ball.group_finder.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_user.*
@@ -14,6 +17,7 @@ class UserActivity : AppCompatActivity() {
     private var databaseReference: DatabaseReference ?= null
     private var database: FirebaseDatabase ?= null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_user)
@@ -24,6 +28,8 @@ class UserActivity : AppCompatActivity() {
 
         loadProfile()
     }
+
+
 
     private fun loadProfile() {
         val user = mAuth.currentUser
