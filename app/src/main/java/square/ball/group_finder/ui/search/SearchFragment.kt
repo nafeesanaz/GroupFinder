@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import square.ball.group_finder.R
 
-
 class SearchFragment : Fragment() {
 
 
