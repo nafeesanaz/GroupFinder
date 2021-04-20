@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import square.ball.group_finder.R
 
+
 class CalendarFragment : Fragment() {
 
 
@@ -19,7 +20,9 @@ class CalendarFragment : Fragment() {
     ): View? {
 
         return inflater.inflate(R.layout.fragment_calendar, container, false)
+
     }
+
 
 
 
