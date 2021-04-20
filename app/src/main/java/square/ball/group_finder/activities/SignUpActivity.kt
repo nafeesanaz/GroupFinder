@@ -24,12 +24,19 @@ class SignUpActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+        register()
 
+        text_view_login.setOnClickListener {
+            startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
+        }
+    }
+    private fun register() {
         register_btn.setOnClickListener {
             val email = email_register.text.toString().trim()
             val password = password_register.text.toString().trim()
 
-            if (email.isEmpty()){
+
+            if (email.isEmpty()) {
                 email_register.error = "Email Required"
                 email_register.requestFocus()
                 return@setOnClickListener
@@ -46,78 +53,16 @@ class SignUpActivity : AppCompatActivity() {
                 password_register.requestFocus()
                 return@setOnClickListener
             }
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                if (it.isSuccessful) {
 
-            registerUser(email, password)
-        }
-
-        text_view_login.setOnClickListener {
-            startActivity(Intent(this@SignUpActivity, LoginActivity::class.java ))
-        }
-    }
-
-    private fun registerUser(email: String, password: String) {
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-
-                    if (task.isSuccessful) {
-                        // Registration success
-                            login()
-                    } else {
-                        task.exception?.message?.let {
-                            toast(it)
-                        }
-                    }
-
-                }
-    }
-
-    override fun onStart(){
-        super.onStart()
-        mAuth.currentUser?.let {
-            login()
-        }
-    }
-
-        register()
-
-        text_view_login.setOnClickListener {
-            startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
-        }
-    }
-     private fun register() {
-            register_btn.setOnClickListener {
-                val email = email_register.text.toString().trim()
-                val password = password_register.text.toString().trim()
-
-
-                if (email.isEmpty()) {
-                    email_register.error = "Email Required"
-                    email_register.requestFocus()
-                    return@setOnClickListener
-                }
-
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    email_register.error = "Valid Email Required"
-                    email_register.requestFocus()
-                    return@setOnClickListener
-                }
-
-                if (password.isEmpty() || password.length < 6) {
-                    password_register.error = "6 char password required"
-                    password_register.requestFocus()
-                    return@setOnClickListener
-                }
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
-                    if (it.isSuccessful) {
-
-                        Toast.makeText(this@SignUpActivity, "Registration Success", Toast.LENGTH_LONG).show()
-                        finish()
-                    } else {
-                        Toast.makeText(this@SignUpActivity, "Registration failed, please try again", Toast.LENGTH_LONG).show()
-                    }
+                    Toast.makeText(this@SignUpActivity, "Registration Success", Toast.LENGTH_LONG).show()
+                    finish()
+                } else {
+                    Toast.makeText(this@SignUpActivity, "Registration failed, please try again", Toast.LENGTH_LONG).show()
                 }
             }
         }
+    }
 
 }
