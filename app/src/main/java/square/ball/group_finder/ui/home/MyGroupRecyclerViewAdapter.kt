@@ -27,7 +27,7 @@ class MyGroupRecyclerViewAdapter(
         holder.locationView.text = group.location
         Picasso.get().load(group.image).into(holder.imageView)
         holder.tagsView.text = group.tags
-        holder.membercountView.text = group.membercount
+//        holder.membercountView.text = group.membercount
     }
 
     override fun getItemCount(): Int = values.size
@@ -37,7 +37,7 @@ class MyGroupRecyclerViewAdapter(
         val locationView: TextView = view.findViewById(R.id.location)
         val imageView: ImageView = view.findViewById(R.id.image)
         val tagsView: TextView = view.findViewById(R.id.tags)
-        val membercountView: TextView = view.findViewById(R.id.membercount)
+//        val membercountView: TextView = view.findViewById(R.id.membercount)
 
     }
 }
