@@ -10,4 +10,5 @@ class CalendarViewModel : ViewModel() {
         value = "This is calendar Fragment"
     }
     val text: LiveData<String> = _text
+
 }
