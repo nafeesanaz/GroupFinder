@@ -18,12 +18,7 @@ import square.ball.group_finder.R
 
 
 class CalendarFragment : Fragment() {
-
-
-
     private lateinit var calendarViewModel: CalendarViewModel
-
-
 
     @SuppressLint("CutPasteId")
     override fun onCreateView(

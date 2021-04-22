@@ -1,40 +1,36 @@
 package square.ball.group_finder.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
+import kotlinx.android.synthetic.main.fragment_user.view.*
 import square.ball.group_finder.R
+import square.ball.group_finder.ui.user.UserFragment
+
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         mAuth = FirebaseAuth.getInstance()
 
-        val currentUser = mAuth.currentUser
-        if (currentUser != null) {
-            startActivity(Intent(this@LoginActivity, UserActivity::class.java))
-            finish()
-        }
-
-        login()
+        login_func()
 
         text_view_register.setOnClickListener {
             startActivity(Intent(this@LoginActivity, SignUpActivity::class.java))
         }
+
     }
 
-    private fun login() {
+    private fun login_func() {
         login_btn.setOnClickListener {
             val email = email_login.text.toString().trim()
             val password = password_login.text.toString().trim()
@@ -60,13 +56,19 @@ class LoginActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        startActivity(Intent(this@LoginActivity, UserActivity::class.java))
-                        finish()
+                       login()
                     } else {
                         Toast.makeText(this@LoginActivity, "Login failed, please try again", Toast.LENGTH_LONG).show()
                     }
                 }
 
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mAuth.currentUser?.let {
+            login()
         }
     }
 }
