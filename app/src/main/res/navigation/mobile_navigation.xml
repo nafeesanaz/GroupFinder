@@ -17,7 +17,7 @@
         android:id="@+id/navigation_search"
         android:name="square.ball.group_finder.ui.search.SearchFragment"
         android:label="@string/title_search"
-        tools:layout="@layout/fragment_users" />
+        tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/navigation_calendar"
         android:name="square.ball.group_finder.ui.calendar.CalendarFragment"
